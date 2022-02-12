@@ -112,6 +112,7 @@ subprojects {
         testImplementation("org.springframework.kafka:spring-kafka-test")
 
         /* For TestCode */
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
         testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
         testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")

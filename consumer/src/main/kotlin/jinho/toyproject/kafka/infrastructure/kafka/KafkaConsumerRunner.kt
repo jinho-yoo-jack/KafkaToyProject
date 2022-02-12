@@ -15,8 +15,8 @@ class KafkaConsumerRunner(private val ctx: ApplicationContext) : ApplicationRunn
 
     override fun run(args: ApplicationArguments?) {
         /*
-         Spring Boot가 생성한 Bean's(in Ioc==ApplicationContext) 중에 @ReactiveKafkaListener가 붙어 있는
-         모든 Bean을 가져온다.
+         Spring Boot가 생성한 Bean's(in Ioc==ApplicationContext) 중에 @ReactiveKafkaListener 어노테이션이 할당되어 있는
+         모든 Beans을 가져온다.
         */
         ctx.getBeansWithAnnotation(ReactiveKafkaListener::class.java).forEach { (_, listener) ->
             val annotation = listener.javaClass.kotlin.findAnnotation<ReactiveKafkaListener>()!!

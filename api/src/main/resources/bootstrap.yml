@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mq-kafka-reactive-consumer
+  profiles:
+    active: local
+  cloud:
+    config:
+      enabled: false
+    zookeeper:
+      enabled: false
+      config:
+        enabled: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306?useUnicode=true&serverTimezone=UTC
+    username: root
+    password: 1q2w3e!Q@W#E
+  kafka:
+    bootstrap-servers: localhost:49310
+    consumer:
+      auto-offset-rest: lastest
+      group-id:
+
+  devtools:
+    livereload:
+      enabled: false
+
+#actuator
+management:
+  endpoint:
+    health:
+      show-details: never
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+  health:
+    redis:
+      enabled: false

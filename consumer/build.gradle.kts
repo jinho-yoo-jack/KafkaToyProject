@@ -3,8 +3,9 @@ dependencies {
     val kotlinxVersion = "1.4.1"
 
     runtimeOnly("mysql:mysql-connector-java")
-    testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
-    testImplementation("io.kotest:kotest-assertions-core")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-hibernate5")
+//    testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
+//    testImplementation("io.kotest:kotest-assertions-core")
 
 }
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

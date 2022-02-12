@@ -1,4 +1,4 @@
 package jinho.toyproject.kafka
 
-class apiService {
+class ApiApplication {
 }
